@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best Mazhindu - Web Development Portfolio. Collection of professional websites developed by Best Mazhindu.">
+    <meta name="author" content="Best Mazhindu">
+    <title>Best Mazhindu - Web Development Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #a0aec0;
+            font-style: italic;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .portfolio-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-arrow {
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover .card-arrow {
+            transform: translateX(5px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 20px;
+            }
+
+            .portfolio-card {
+                padding: 25px;
+                min-height: 130px;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Best Mazhindu</h1>
+            <p class="subtitle">Web Development Portfolio</p>
+            <p class="description">Collection of websites developed by Best Mazhindu</p>
+        </header>
+
+        <main>
+            <div class="portfolio-grid">
+                <a href="./awana/" class="portfolio-card">
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title">Awana</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./gminvestments.co.zw/" class="portfolio-card">
+                    <div class="card-icon">💼</div>
+                    <div class="card-title">GM Investments</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./halescakes/" class="portfolio-card">
+                    <div class="card-icon">🎂</div>
+                    <div class="card-title">Hales Cakes</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./jojocakeshop/" class="portfolio-card">
+                    <div class="card-icon">🧁</div>
+                    <div class="card-title">Jojo Cake Shop</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./loterfant/" class="portfolio-card">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-title">Loterfant</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./medlicotech/" class="portfolio-card">
+                    <div class="card-icon">⚕️</div>
+                    <div class="card-title">Medlicotech</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./mps.com/" class="portfolio-card">
+                    <div class="card-icon">🏢</div>
+                    <div class="card-title">MPS</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./nationTV/" class="portfolio-card">
+                    <div class="card-icon">📺</div>
+                    <div class="card-title">Nation TV</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./ntm/" class="portfolio-card">
+                    <div class="card-icon">🌐</div>
+                    <div class="card-title">NTM</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./parksec/" class="portfolio-card">
+                    <div class="card-icon">🔒</div>
+                    <div class="card-title">Parksec</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./pcg-healthcare/" class="portfolio-card">
+                    <div class="card-icon">🏥</div>
+                    <div class="card-title">PCG Healthcare</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./skcleaners/" class="portfolio-card">
+                    <div class="card-icon">✨</div>
+                    <div class="card-title">SK Cleaners</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./streams/" class="portfolio-card">
+                    <div class="card-icon">🌊</div>
+                    <div class="card-title">Streams</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./tammymusic.com/" class="portfolio-card">
+                    <div class="card-icon">🎵</div>
+                    <div class="card-title">Tammy Music</div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a href="./umojaafricanetwork/" class="portfolio-card">
+                    <div class="card-icon">🌍</div>
+                    <div class="card-title">Umoja African Network</div>
+                    <div class="card-arrow">→</div>
+                </a>
+            </div>
+
+            <div class="note">
+                <strong>⚠️ Note:</strong> The <em>pcg-healthcare</em> directory is currently empty and does not contain an index.html file. All other websites are fully accessible.
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Best Mazhindu. All rights reserved.</p>
+            <p>Web Development Portfolio</p>
+        </footer>
+    </div>
+</body>
+</html>
